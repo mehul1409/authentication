@@ -1,4 +1,4 @@
-# Authentication Application
+# User Management Application
 
 This is a comprehensive authentication application built with Node.js and Express. It provides functionalities for user registration, login, email verification, password management, profile management (basic), and administrative user management.
 
@@ -27,8 +27,8 @@ This is a comprehensive authentication application built with Node.js and Expres
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your_repository_url>
-    cd <your_project_directory>
+    git clone git@github.com:mehul1409/authentication.git
+    cd authentication
     ```
 
 2.  **Install dependencies:**
@@ -50,10 +50,47 @@ This is a comprehensive authentication application built with Node.js and Expres
 
 For detailed information about the API endpoints, please refer to the [API Documentation](Docs/api_documentation.md).
 
-## Contributing
 
-[Optional: Add your contributing guidelines here]
+# User Management API
 
-## License
+This document describes the environment variables required to run the User Management API.
 
-[Optional: Add your license information here]
+## Server
+
+| Variable    | Description                               | Example               |
+| :---------- | :---------------------------------------- | :-------------------- |
+| `PORT`      | The port the server listens on.           | `5000`                |
+| `NODE_ENV`  | The environment the application is running in. | `development`         |
+
+## MongoDB
+
+| Variable      | Description                               | Example                                  |
+| :------------ | :---------------------------------------- | :--------------------------------------- |
+| `MONGODB_URI` | The URI for connecting to the MongoDB database. | `mongodb://localhost:27017/user-management` |
+
+## JWT
+
+| Variable    | Description                              | Example          |
+| :---------- | :--------------------------------------- | :--------------- |
+| `JWT_SECRET` | Secret key used for JWT signing.         | `your_secret_key` |
+
+## Email
+
+| Variable       | Description                                  | Example                       |
+| :------------- | :------------------------------------------- | :---------------------------- |
+| `EMAIL_HOST`   | The hostname of the email server.            | `smtp.gmail.com`              |
+| `EMAIL_PORT`   | The port of the email server.                | `587`                         |
+| `EMAIL_USER`   | The username for the email account.          | `your_email@example.com`      |
+| `EMAIL_PASSWORD` | The password for the email account.          | `your_email_password`         |
+| `EMAIL_FROM`   | The email address used as the sender.        | `your_email@example.com`      |
+| `EMAIL_SECURE` | Whether to use secure connection (e.g., TLS). | `false`                       |
+
+## Cloudinary
+
+| Variable                | Description                            | Example             |
+| :---------------------- | :------------------------------------- | :------------------ |
+| `CLOUDINARY_CLOUD_NAME` | The Cloudinary Cloud Name.             | `your_cloud_name`   |
+| `CLOUDINARY_API_KEY`    | The Cloudinary API Key.                | `your_api_key`      |
+| `CLOUDINARY_API_SECRET` | The Cloudinary API Secret.             | `your_api_secret` |
+
+
